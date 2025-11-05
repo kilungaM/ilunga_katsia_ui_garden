@@ -1,4 +1,10 @@
 
-npm lint-staged
-npm run precommit:checks
 
+echo "Running Prettier..."
+npm run format
+
+echo "Running ESLint..."
+npm run lint
+
+echo "Running tests..."
+npm test -- --watchAll=false
